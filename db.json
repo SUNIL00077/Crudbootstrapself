@@ -1,0 +1,59 @@
+{
+  "posts": [
+    {
+      "id": 4,
+      "name": "sunil",
+      "email": "lengare@gmail.com",
+      "mobile": 9021153690,
+      "city": "sangola dhayati"
+    },
+    {
+      "name": "sunya",
+      "email": "sunya",
+      "mobile": 87654,
+      "city": "Dhayati",
+      "id": 5
+    },
+    {
+      "name": "Sangola",
+      "email": "sunya",
+      "mobile": 453454623,
+      "city": "Dhayati",
+      "id": 6
+    },
+    {
+      "name": "santosh",
+      "email": "santosh@gmail.com",
+      "mobile": 987654,
+      "city": "gdfvdfvvvdsca",
+      "id": 7
+    }
+  ],
+  "signup": [
+    {
+      "name": "sunil",
+      "email": "sunil",
+      "mobile": 9021153690,
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "name": "sunya",
+      "email": "sunya@gmail.com",
+      "mobile": 902115,
+      "password": "123",
+      "id": 2
+    },
+    {
+      "name": "santosh",
+      "email": "santosh",
+      "mobile": 34567,
+      "password": "11111",
+      "id": 3
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

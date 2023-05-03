@@ -1,0 +1,89 @@
+<!-- D:\crud\student>json-server --watch db.json -->
+
+
+
+<nav class="navbar navbar-light bg-dark">
+    <div class="container-fluid">
+        <h2 class="text-light primary py-3">Student management system</h2>
+        <div class="d-flex">
+            
+            <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal" >Add Student</button>
+      <button class="btn btn-warning">Logout</button>
+        </div>
+    </div>
+</nav>
+
+<!-- Table -->
+<table class="table mt-4">
+    <thead>
+        <tr>
+            <th>S.Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>City</th>
+            <th>Action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of ss">
+          <td>{{data.id}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.mobile}}</td>
+            <td>{{data.city}}</td>
+            
+            <td>
+                <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>&nbsp;
+                <button class="btn btn-danger">Delete</button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+
+
+<!-- button trigger modal -->
+<!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div style="background: blue;" class="modal-header">
+          <h5 style="color: aliceblue;font-size: 20px;margin-left: 62px;font-weight: 620;" class="modal-title" id="exampleModalLabel">Student management</h5>
+          <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button> -->
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="formValue">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Name</label>
+              <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              </div>
+               <div class="form-group">
+                <label for="exampleInputEmail1">Mobile</label>
+                <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              </div>
+               <div class="form-group">
+                <label for="exampleInputEmail1">City</label>
+                <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="postAllStudentData()">Add</button>
+          <button type="button" class="btn btn-primary">Update</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
